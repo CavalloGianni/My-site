@@ -9,18 +9,10 @@ import { cn } from "@/lib/utils";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import DisplayCards from "@/components/ui/display-cards";
 import { Sparkles } from "lucide-react";
+import { SparklesCore } from "@/components/ui/sparkles"
+
 
 const defaultCards = [
-  {
-    icon: <Sparkles className="size-4 text-blue-300" />,
-    title: "Featured",
-    description: "Discover amazing content",
-    date: "Just now",
-    iconClassName: "text-blue-500",
-    titleClassName: "text-blue-500",
-    className:
-      "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
-  },
     {
     icon: <Sparkles className="size-4 text-blue-300" />,
     title: "Featured",
@@ -96,28 +88,7 @@ const cards = [
 export default function Page() {
   return (
     <div>
-      <div className="text-center">
-        <Cursor size={60} />
-        <div className="pt-8 flex justify-center">
-          <div className="logo-duo inline-flex items-center gap-6">
-            <span className="logo-shadow" aria-hidden="true" />
-            <span className="logo-orbit" aria-hidden="true" />
-            <Image
-              src="/2g-mark.svg"
-              alt="2G logomark"
-              width={120}
-              height={120}
-              className="logo-element logo-mark h-24 w-24 object-contain"
-              priority
-              draggable={false}
-            />
-            <span className="logo-element logo-type text-4xl md:text-[5rem] font-bold leading-none text-black dark:text-white">
-              Studio
-            </span>
-          </div>
-        </div>
-      </div>
-
+    
       <div className="block">
         <Hero />
       </div>
@@ -145,7 +116,7 @@ export default function Page() {
           />
         </ContainerScroll>
 
-       <ContainerScroll
+        <ContainerScroll
           titleComponent={
             <>
               <h1 className="text-4xl font-semibold text-black dark:text-white">
@@ -167,7 +138,7 @@ export default function Page() {
           />
         </ContainerScroll>
 
-         <ContainerScroll
+        <ContainerScroll
           titleComponent={
             <>
               <h1 className="text-4xl font-semibold text-black dark:text-white">
@@ -188,8 +159,8 @@ export default function Page() {
             draggable={false}
           />
         </ContainerScroll>
-
       </div>
+
       <section className="mt-16 px-128 md:px-8">
         <ul className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {cards.map((card) => (
@@ -224,18 +195,37 @@ export default function Page() {
         </ul>
       </section>
 
-
-    <div className="py-16 flex justify-center">
-      <RainbowButton>Get Unlimited Access</RainbowButton>
-    </div>
-        <div className="flex min-h-[400px] w-full items-center justify-center py-20">
-      <div className="w-full max-w-3xl">
-        <DisplayCards cards={defaultCards} />
+      <div className="py-16 flex justify-center">
+        <RainbowButton>Get Unlimited Access</RainbowButton>
+      </div>
+      <div className="flex min-h-[400px] w-full items-center justify-center py-20">
+        <div className="w-full max-w-3xl">
+          <DisplayCards cards={defaultCards} />
+        </div>
+        <div className="w-full max-w-3xl">
+          <DisplayCards cards={defaultCards} />
+        </div>
+      </div>
+      <div className="relative"></div>
+playCards cards={defaultCards} />
       </div>
       <div className="w-full max-w-3xl">
       <DisplayCards cards={defaultCards} />
       </div>
     </div>
+    <div className="relative">
+ 
+    
+    </div>
+
+<DisplayCards cards={defaultCards} />
+      </div>
+    </div>
+    <div className="relative">
+ 
+    
+    </div>
+
     </div>
   );
 }
