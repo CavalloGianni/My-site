@@ -9,11 +9,12 @@ import { cn } from "@/lib/utils";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import DisplayCards from "@/components/ui/display-cards";
 import { Sparkles } from "lucide-react";
-import { SparklesCore } from "@/components/ui/sparkles"
+import { SparklesCore } from "@/components/ui/sparkles";
+import Logo from "@/app/img/Logo_G2.png";
 
 
 const defaultCards = [
-    {
+  {
     icon: <Sparkles className="size-4 text-blue-300" />,
     title: "Featured",
     description: "Discover amazing content",
@@ -23,7 +24,7 @@ const defaultCards = [
     className:
       "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
   },
-  
+
   {
     icon: <Sparkles className="size-4 text-blue-300" />,
     title: "Popular",
@@ -88,13 +89,18 @@ const cards = [
 export default function Page() {
   return (
     <div>
-      <div className="relative flex min-h-[320px] w-full text-center">
-        <Cursor size={60} />
-        <SparklesCore className="absolute inset-0 h-full w-full p-0 m-0" />
-        <div className="relative z-10 flex justify-center">
+      <Cursor size={60} />
+      <div className="relative flex min-h-[320px] w-full items-center justify-center text-center">
+        <SparklesCore className="pointer-events-none absolute inset-0 z-20 h-full w-full p-0 m-0" />
+        <div className="relative">
           <div className="logo-duo inline-flex items-center">
-            <span className="logo-type text-4xl md:text-[5rem] font-bold leading-none text-black dark:text-white">
-              G2 Studio
+            <span className="logo-type mx-auto inline-flex items-center gap-4 text-4xl md:text-[5rem] font-bold leading-none text-black dark:text-white">
+              <Image
+                src={Logo}
+                alt="Logo G2 Studio"
+                className="h-[0.5rem] w-auto md:h-[0.5rem]"
+                priority
+              />
             </span>
           </div>
         </div>
