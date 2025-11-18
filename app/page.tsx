@@ -88,7 +88,18 @@ const cards = [
 export default function Page() {
   return (
     <div>
-    
+      <div className="relative flex min-h-[320px] w-full text-center">
+        <Cursor size={60} />
+        <SparklesCore className="absolute inset-0 h-full w-full p-0 m-0" />
+        <div className="relative z-10 flex justify-center">
+          <div className="logo-duo inline-flex items-center">
+            <span className="logo-type text-4xl md:text-[5rem] font-bold leading-none text-black dark:text-white">
+              G2 Studio
+            </span>
+          </div>
+        </div>
+      </div>
+
       <div className="block">
         <Hero />
       </div>
@@ -207,25 +218,6 @@ export default function Page() {
         </div>
       </div>
       <div className="relative"></div>
-playCards cards={defaultCards} />
-      </div>
-      <div className="w-full max-w-3xl">
-      <DisplayCards cards={defaultCards} />
-      </div>
-    </div>
-    <div className="relative">
- 
-    
-    </div>
-
-<DisplayCards cards={defaultCards} />
-      </div>
-    </div>
-    <div className="relative">
- 
-    
-    </div>
-
     </div>
   );
 }
